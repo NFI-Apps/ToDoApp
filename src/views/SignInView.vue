@@ -6,7 +6,7 @@
       >
         <form @submit="loginWithEmailAndPassword">
           <div class="mb-3 text-center">
-            <h1>VueFire ToDo</h1>
+            <h1>NFI - ToDo App</h1>
           </div>
           <hr />
           <div
