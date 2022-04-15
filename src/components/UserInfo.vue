@@ -1,13 +1,10 @@
 <template>
-  <h1>User Info</h1>
-  <img class="mb-3 rounded-pill" v-if="!!this.getPhoto" :src="this.getPhoto" />
+  <img class="rounded-pill vw-10 vh-10" v-if="!!this.getPhoto" :src="this.getPhoto" />
   <div v-if="!!this.getDisplayName">
-    <h5>Display Name</h5>
-    <p>{{ this.getDisplayName }}</p>
+    <h5>{{ this.getDisplayName }}</h5>
   </div>
   <div>
-    <h5>Email</h5>
-    <p>{{ this.getEmail }}</p>
+    <h6>{{ this.getEmail }}</h6>
   </div>
   <button class="btn btn-danger btn-sm" @click="this.signOut">Log Out</button>
 </template>

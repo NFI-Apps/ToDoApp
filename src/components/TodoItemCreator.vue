@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="form-block mb-3">
-      <label class="form-label" for="header">Header</label>
+      <label class="form-label" for="header">Item</label>
       <input class="form-control" type="text" v-model="this.newTodo.header" />
     </div>
     <div class="form-block mb-3">
-      <label class="form-label" for="content">Content</label>
+      <label class="form-label" for="content">Details</label>
       <textarea
         class="form-control"
         style="resize: none"

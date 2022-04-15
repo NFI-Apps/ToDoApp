@@ -1,14 +1,13 @@
 <template>
   <div class="container">
-    <div class="row align-items-center min-vh-100">
-      <div
-        class="col-12 col-sm-8 col-md-6 col-lg-4 offset-0 offset-sm-2 offset-md-3 offset-lg-4"
-      >
-        <form @submit="loginWithEmailAndPassword">
-          <div class="mb-3 text-center">
-            <h1>NFI - ToDo App</h1>
+    <div class="row align-items-center h-screen w-screen">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+          <div class="w-full flex flex-col items-center">            
+            <div class="text-xl font-bold">National Foundation for India</div>
+            <div class="text-3xl font-bold">ToDo List</div>
           </div>
-          <hr />
+        <form @submit="loginWithEmailAndPassword">        
+      
           <div
             class="mb-3 border bg-warning border-warning rounded p-2"
             style="--bs-bg-opacity: 0.2"
@@ -16,26 +15,24 @@
           >
             {{ this.message }}
           </div>
-          <div class="mb-3">
-            <label class="form-label" for="email">Email</label>
+          <div class="m-5">
             <input
-              class="form-control"
+              class="form-control mr-3 pr-3"
               type="email"
               name="email"
               id="email"
               v-model="this.email"
-              placeholder="name@example.com"
+              placeholder="Enter username"
               required
             />
           </div>
-          <div class="mb-4">
-            <label class="form-label" for="password">Password</label>
+          <div class="m-5">
             <div class="input-group mb-3">
               <input
                 :type="this.isPasswordVisible ? 'text' : 'password'"
                 class="form-control"
                 name="password"
-                placeholder="Your secure password"
+                placeholder="Password"
                 v-model="this.password"
                 required
               />
