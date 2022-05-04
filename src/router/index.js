@@ -1,6 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import SignInView from "../views/SignInView";
-import store from "../store";
+import { createRouter, createWebHistory } from "vue-router";
+import SignInView from "@/views/SignInView";
+import store from "@/store";
+
 const routes = [
   {
     path: "/sign-in",
@@ -10,20 +11,20 @@ const routes = [
   {
     path: "/sign-up",
     name: "sign-up",
-    component: () => import("../views/SignUpView"),
+    component: () => import("@/views/SignUpView"),
   },
   {
     path: "/home",
     name: "home",
-    component: () => import("../views/HomeView"),
+    component: () => import("@/views/HomeView"),
     meta: { requiresAuth: true },
   },
-]
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
@@ -36,4 +37,5 @@ router.beforeEach(async (to, from, next) => {
     next();
   }
 });
-export default router
+
+export default router;

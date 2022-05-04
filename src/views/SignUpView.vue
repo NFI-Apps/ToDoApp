@@ -6,7 +6,8 @@
       >
         <form @submit="this.signUpWithEmailAndPassword">
           <div class="mb-3 text-center">
-            <h1>VueFire ToDo</h1>
+            <h1>NFI - ToDo App</h1>
+            <h4>National Foundation For India</h4>
           </div>
           <hr />
           <div

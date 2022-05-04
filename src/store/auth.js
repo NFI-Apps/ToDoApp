@@ -1,5 +1,5 @@
-import router from "../router";
-import { app, auth } from "../firebase";
+import router from "@/router";
+import { app, auth } from "@/firebase";
 
 export default {
   state: {

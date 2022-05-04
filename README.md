@@ -1,24 +1,13 @@
-# todoapp
+# NFI - ToDo App App
 
-## Project setup
-```
-npm install
-```
+VueFire is a small one-page application based on Vue.js and Firebase that could be used for writing the tasks and mark them as completed/uncompleted.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features
++ Registration with email verification
++ Login with email/password or via Google
++ Create new tasks with title and/or content
++ Mark tasks as done/not done
++ Delete existing tasks
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Live preview on GitHub Pages
+https://meowkita.github.io/nfi-todo/sign-in

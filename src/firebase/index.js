@@ -8,7 +8,7 @@ const firebaseConfig = {
   projectId: "nfi-apps",
   storageBucket: "nfi-apps.appspot.com",
   messagingSenderId: "580102998429",
-  appId: "1:580102998429:web:e34d8519ceda9c38138774"
+  appId: "1:580102998429:web:e34d8519ceda9c38138774",
 };
 
 const app = initializeApp(firebaseConfig);
