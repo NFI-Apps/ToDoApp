@@ -9,4 +9,4 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "./registerServiceWorker";
 
 createApp(App).use(store).use(router).mount("#app");
-router.push("/sign-in");
+// router.push("/sign-in");

@@ -75,6 +75,7 @@
 </template>
 
 <script>
+import { app, auth } from "@/firebase";
 export default {
   name: "SignInView",
   data() {
@@ -100,6 +101,13 @@ export default {
         this.message = error.message;
       }
     },
+  },
+  mounted: async function () {
+    await auth.getRedirectResult(auth.getAuth(app)).then((response) => {
+      if (response != null) {
+        this.$store.dispatch("PostSignInGoogle", response.user);
+      }
+    });
   },
 };
 </script>

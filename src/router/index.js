@@ -4,7 +4,7 @@ import store from "@/store";
 
 const routes = [
   {
-    path: "/sign-in",
+    path: "/",
     name: "sign-in",
     component: SignInView,
   },
@@ -32,7 +32,7 @@ router.beforeEach(async (to, from, next) => {
       next();
       return;
     }
-    next("/sign-in");
+    next("/");
   } else {
     next();
   }

@@ -12,7 +12,7 @@ export default {
   },
   mutations: {
     signUp() {
-      router.push("/sign-in");
+      router.push("/");
     },
     signIn(state, user) {
       state.user = user;
@@ -20,7 +20,7 @@ export default {
     },
     signOut(state) {
       state.user = null;
-      router.push("/sign-in");
+      router.push("/");
     },
   },
   actions: {
@@ -53,12 +53,14 @@ export default {
           throw Error("Invalid email or password.");
         });
     },
-    async signInWithGoogle({ commit }) {
-      await auth
-        .signInWithPopup(auth.getAuth(app), new auth.GoogleAuthProvider())
-        .then((response) => {
-          commit("signIn", response.user);
-        });
+    async signInWithGoogle() {
+      await auth.signInWithRedirect(
+        auth.getAuth(app),
+        new auth.GoogleAuthProvider()
+      );
+    },
+    async PostSignInGoogle({ commit }, user) {
+      commit("signIn", user);
     },
     async signOut({ commit }) {
       await auth
